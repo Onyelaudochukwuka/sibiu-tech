@@ -1,6 +1,6 @@
 import React, { type FC } from 'react';
 
-import type { IconProps, Props, PropTypes } from '../typescript';
+import type { IconProps, Props, PropTypes } from '../../typescript';
 
 const CtaIllustartion: FC<PropTypes<Props, IconProps>> = (props) => {
   return (
