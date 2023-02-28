@@ -22,7 +22,7 @@ const Features: FC<IFeaturesProps> = () => {
       className={`flex flex-col pt-16 bg-primary text-white ${overlockSc.className}`}
     >
       <div className="px-12 flex flex-col ">
-        <div className="flex gap-12 justify-between">
+        <div className="flex lg:flex-row flex-col-reverse gap-12 justify-between">
           <p className="basis-2/5">
             It’s Important to get the entire team on board while exploring the
             infinite potentials available by the cloud

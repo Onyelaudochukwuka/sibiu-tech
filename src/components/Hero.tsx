@@ -1,4 +1,4 @@
-import React, { useEffect, type FC, useRef } from 'react';
+import React, { type FC, useRef } from 'react';
 
 import { DownArrow } from '@src/assets';
 import { motion } from 'framer-motion';
