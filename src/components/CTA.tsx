@@ -1,6 +1,5 @@
 import React, { type FC } from 'react';
 
-
 export interface ICTAProps {
 }
 

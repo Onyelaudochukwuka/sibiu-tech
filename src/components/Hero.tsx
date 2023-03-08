@@ -2,9 +2,6 @@ import React, { type FC, useRef } from 'react';
 
 import { DownArrow } from '@src/assets';
 import { motion } from 'framer-motion';
-import Image from 'next/image';
-
-import image from '../../public/HeroBackground.jpeg';
 
 export interface IHeroProps {
 }
@@ -12,7 +9,7 @@ const Hero: FC<IHeroProps> = () => {
   const ref = useRef(null);
   const links = ['About', 'Blog', 'Services', 'Pricing'];
   return (
-    <section ref={ref} className="relative h-screen w-full text-white overflow-hidden">
+    <section ref={ref} className="relative h-screen w-full text-white overflow-hidden hero">
       <motion.nav
         initial={{ y: -100 }}
         animate={{ y: 0 }}
@@ -29,12 +26,12 @@ const Hero: FC<IHeroProps> = () => {
           </span>
         </div>
       </motion.nav>
-      <Image
+      {/* <Image
         src={image}
         className="absolute inset-0 block select-none -z-10"
         alt="image"
         onContextMenu={() => false}
-      />
+      /> */}
       <div className="absolute top-2/4 inset-x-0 w-fit mx-auto flex flex-col gap-4">
         <motion.h1
           initial={{ opacity: 0, y: 100 }}
