@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.hero{
+  width: 100vw;
+height: 100vh;
+background: url(/HeroBackground.jpeg);
+background-size: cover;
+background-position: center, center;
+}
