@@ -6,8 +6,7 @@ const ProgrammersOffice: FC<PropTypes<Props, IconProps>> = (props) => {
   return (
     <svg
       {...props}
-      width="1280"
-      height="769"
+      className="w-full"
       viewBox="0 0 1280 769"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
