@@ -17,7 +17,7 @@ const Hero: FC<IHeroProps> = () => {
         className="absolute inset-x-0 w-full flex justify-between items-center z-0 px-10 py-8 font-bold"
       >
         <span>SibiuTech</span>
-        <div className="flex gap-8 items-center">
+        <div className="hidden gap-8 items-center lg:flex">
           {links.map((val) => (
             <span key={val}>{val}</span>
           ))}

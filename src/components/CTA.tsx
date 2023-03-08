@@ -1,5 +1,7 @@
 import React, { type FC } from 'react';
 
+import Image from 'next/image';
+
 export interface ICTAProps {
 }
 
@@ -20,9 +22,9 @@ const CTA: FC<ICTAProps> = () => {
             ))}
         </div>
       </div>
-      <div className="flex justify-between py-4 px-12 flex lg:flex-row flex-col">
-        <div className="basis-2/5 flex flex-col gap-6">
-          <h1 className="text-5xl font-bold">Want To Know More ?</h1>
+      <div className="flex justify-between py-4 px-12 items-center lg:flex-row flex-col-reverse">
+        <div className="lg:basis-2/5 w-full flex flex-col gap-6">
+          <h1 className="lg:text-5xl text-4xl font-bold">Want To Know More ?</h1>
           <button
             type="button"
             className="border-2 w-fit border-white px-4 py-3 rounded-full hover:text-[#0051a1] hover:bg-white transition-colors ease-in duration-300 cursor-pointer"
@@ -30,7 +32,7 @@ const CTA: FC<ICTAProps> = () => {
             Contact us
           </button>
         </div>
-        <div className="h-auto bg-gray-400 basis-2/5" />
+        <Image alt="Contact Us" src="/automate.jpg" width={1024} height={1024} className="h-auto lg:w-2/5 lg:block hidden  basis-2/5 rounded-lg" />
       </div>
     </section>
   );

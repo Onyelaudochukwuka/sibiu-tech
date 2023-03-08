@@ -120,7 +120,7 @@ const Features: FC<IFeaturesProps> = () => {
             scrollTrigger: {
               trigger: '.container',
               scrub: 0.5,
-              markers: true,
+              markers: false,
             },
           }}
         >
@@ -152,7 +152,7 @@ const Features: FC<IFeaturesProps> = () => {
               scrollTrigger: {
                 trigger: '.container',
                 scrub: 0.5,
-                markers: true,
+                markers: false,
               },
             }}
           >
