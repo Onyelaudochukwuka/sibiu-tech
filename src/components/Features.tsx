@@ -116,9 +116,9 @@ const Features: FC<IFeaturesProps> = () => {
           }}
           to={{
             y: 20,
-            willChange: "transform",
+            willChange: 'transform',
             scrollTrigger: {
-              trigger: ".container",
+              trigger: '.container',
               scrub: 0.5,
               markers: false,
             },
@@ -148,9 +148,9 @@ const Features: FC<IFeaturesProps> = () => {
             }}
             to={{
               y: 20,
-              willChange: "transform",
+              willChange: 'transform',
               scrollTrigger: {
-                trigger: ".container",
+                trigger: '.container',
                 scrub: 0.5,
                 markers: false,
               },
