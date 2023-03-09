@@ -26,7 +26,7 @@ const Hero: FC<IHeroProps> = () => {
             !drop
               ? 'inset-0 top-0 flex -translate-x-full h-screen w-screen px-12 pt-32 opacity-100 bg-primary z-10'
               : 'inset-0 top-0 flex translate-x-0 h-screen w-screen px-12 pt-32 opacity-100 bg-primary z-10'
-          } fixed z-10 lg:basis-1/3 flex-col transition-transform duration-300 ease-in  overflow-y-hidden lg:bg-transparent lg:space-y-0 lg:justify-between  lg:items-center space-y-12 lg:relative lg:top-0 lg:my-auto lg:ml-auto lg:flex ap-6g lg:h-fit lg:w-full lg:flex-row lg:overflow-y-visible lg:p-0 lg:align-middle lg:opacity-100
+          } fixed z-10 flex-col transition-transform duration-300 ease-in  overflow-y-hidden lg:bg-transparent lg:space-y-0 lg:justify-between  lg:items-center space-y-12 lg:relative lg:top-0 lg:my-auto lg:ml-auto lg:flex gap-6 lg:h-fit lg:flex-row lg:overflow-y-visible lg:p-0 lg:align-middle lg:opacity-100
         `}
         >
           {links.map((val) => (
