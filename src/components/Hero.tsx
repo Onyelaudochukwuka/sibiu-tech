@@ -18,7 +18,7 @@ const Hero: FC<IHeroProps> = () => {
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 1.5 }}
-        className="absolute inset-x-0 w-full flex justify-between items-center z-20 px-10 py-8 font-bold"
+        className={`${!drop ? 'absolute' : 'sticky lg:absolute top-0'} inset-x-0 w-full flex justify-between items-center z-20 px-10 py-8 font-bold`}
       >
         <Logo className="w-16 h-16 z-20" />
         <div
