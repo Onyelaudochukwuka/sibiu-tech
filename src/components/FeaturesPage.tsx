@@ -32,7 +32,7 @@ const FeaturesPage: FC<IFeaturesPageProps> = ({
       }}
       to={{
         skewY: 2.5,
-        willChange: "transform",
+        willChange: 'transform',
         scrollTrigger: {
           trigger: wrapper,
           scrub: 0.5,
