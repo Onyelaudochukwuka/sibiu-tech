@@ -99,8 +99,8 @@ const Features: FC<IFeaturesProps> = () => {
     <section
       className={`flex flex-col pt-16 bg-primary text-white ${overlockSc.className}`}
     >
-      <div className="px-12 flex flex-col container">
-        <div className="flex lg:flex-row flex-col-reverse gap-12 justify-between">
+      <div className="flex flex-col container">
+        <div className="flex px-12 lg:flex-row flex-col-reverse gap-12 justify-between">
           <p className="basis-2/5">
             It’s Important to get the entire team on board while exploring the
             infinite potentials available by the cloud
@@ -116,9 +116,9 @@ const Features: FC<IFeaturesProps> = () => {
           }}
           to={{
             y: 20,
-            willChange: 'transform',
+            willChange: "transform",
             scrollTrigger: {
-              trigger: '.container',
+              trigger: ".container",
               scrub: 0.5,
               markers: false,
             },
@@ -148,9 +148,9 @@ const Features: FC<IFeaturesProps> = () => {
             }}
             to={{
               y: 20,
-              willChange: 'transform',
+              willChange: "transform",
               scrollTrigger: {
-                trigger: '.container',
+                trigger: ".container",
                 scrub: 0.5,
                 markers: false,
               },
