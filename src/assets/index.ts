@@ -5,3 +5,4 @@ export { default as ProgrammersOffice } from './ProgrammersOffice.icon';
 export { default as Dev } from './Dev.icon';
 export { default as Radar } from './Radar.icon';
 export { default as Training } from './Training.icon';
+export { default as Logo } from './Logo.icon';
