@@ -47,7 +47,7 @@ const CTA: FC<ICTAProps> = () => {
         <div className="flex w-full justify-between flex-col lg:flex-row gap-6">
           <Logo className="w-16 h-16" />
 
-          <form className="flex lg-flex-row flex-col gap-4 lg:w-2/4 w-full">
+          <form className="flex lg:flex-row flex-col gap-4 lg:w-2/4 w-full">
             <input
               type="email"
               placeholder="Enter Your Email"
