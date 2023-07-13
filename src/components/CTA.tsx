@@ -38,10 +38,10 @@ const CTA: FC<ICTAProps> = () => {
   return (
     <section className="bg-primary text-white min-h-screen grid place-content-center">
       <div className="px-12">
-        <h2 className="text-center text-3xl font-bold">
+        <h2 className="text-center lg:text-3xl text-2xl font-bold">
           These companies Already Trust Us
         </h2>
-        <div className="flex gap-8 my-6">
+        <div className="flex gap-8 my-6 flex-wrap">
           {Array(5)
             .fill(null)
             .map(() => (
@@ -51,9 +51,9 @@ const CTA: FC<ICTAProps> = () => {
             ))}
         </div>
       </div>
-      <div className="flex justify-between py-4 px-12 items-center flex-col">
+      <div className="flex justify-between py-4 px-12 items-center flex-col mx-auto">
         <div className="lg:basis-2/5 w-full flex flex-col gap-6 my-4">
-          <h1 className="lg:text-5xl text-4xl font-bold">
+          <h1 className="lg:text-5xl text-2xl font-bold">
             Want To Know More ?
           </h1>
         </div>
