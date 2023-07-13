@@ -97,7 +97,7 @@ const Features: FC<IFeaturesProps> = () => {
   ];
   return (
     <section
-      className={`flex flex-col pt-16 bg-primary text-white ${overlockSc.className}`}
+      className={`flex flex-col pt-16 bg-primary text-white ${overlockSc.className} pb-12`}
     >
       <div className="flex flex-col container">
         <div className="flex px-12 lg:flex-row flex-col-reverse gap-12 justify-between">

@@ -1,14 +1,42 @@
-import React, { type FC } from 'react';
+/* eslint-disable no-console */
+import React, { useState, type FC, type FormEvent } from 'react';
 
-import { Logo } from '@src/assets';
-import Image from 'next/image';
+import { z } from 'zod';
 
 export interface ICTAProps {
 }
 
 const CTA: FC<ICTAProps> = () => {
+  const [email, setEmail] = useState('');
+  const emailSchema = z.object({
+    email: z.string().email(),
+  });
+  const [error, setError] = useState<boolean>(false);
+  const handleSubmit = (e: FormEvent<HTMLFormElement>): void => {
+    e.preventDefault();
+    try {
+      const API_URL = '/api/send';
+      const data = {
+        email,
+      };
+      emailSchema.parse(data);
+      fetch(API_URL, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      }).then((res) => {
+        console.log(res);
+      }).catch((err) => {
+        console.log(err);
+      });
+    } catch (err) {
+      setError(true);
+    }
+  };
   return (
-    <section className="bg-[#010030] text-white pt-6">
+    <section className="bg-primary text-white min-h-screen grid place-content-center">
       <div className="px-12">
         <h2 className="text-center text-3xl font-bold">
           These companies Already Trust Us
@@ -23,50 +51,40 @@ const CTA: FC<ICTAProps> = () => {
             ))}
         </div>
       </div>
-      <div className="flex justify-between py-4 px-12 items-center lg:flex-row flex-col-reverse">
+      <div className="flex justify-between py-4 px-12 items-center flex-col">
         <div className="lg:basis-2/5 w-full flex flex-col gap-6 my-4">
           <h1 className="lg:text-5xl text-4xl font-bold">
             Want To Know More ?
           </h1>
-          <button
-            type="button"
-            className="border-2 w-fit border-white px-4 py-3 rounded-full hover:text-[#0051a1] hover:bg-white transition-colors ease-in duration-300 cursor-pointer"
-          >
-            Contact us
-          </button>
         </div>
-        <Image
-          alt="Contact Us"
-          src="/automate.jpg"
-          width={1024}
-          height={1024}
-          className="h-auto lg:w-2/5 lg:block hidden  basis-2/5 rounded-lg"
-        />
-      </div>
-      <footer className="flex flex-col justify-between bg-primary  px-8 py-6 gap-6">
-        <div className="flex w-full justify-between flex-col lg:flex-row gap-6">
-          <Logo className="w-16 h-16" />
-
-          <form className="flex lg:flex-row flex-col gap-4 lg:w-2/4 w-full">
+        <form
+          onSubmit={handleSubmit}
+          className="flex flex-col gap-4 w-full"
+        >
+          <div className="w-full space-y-2 flex flex-col">
             <input
               type="email"
               placeholder="Enter Your Email"
-              className="border-2 lg:w-3/4 w-full border-white px-4 py-3 rounded-full hover:text-[#0051a1] hover:bg-white transition-colors ease-in duration-300 cursor-text"
+              value={email}
+              onChange={(e) => { setEmail(e.target.value); }}
+              className="border-2  w-full border-white px-4 py-3 rounded-full hover:text-[#0051a1] hover:bg-white transition-colors ease-in duration-300 cursor-text"
             />
-            <button
-              type="submit"
-              className="border-2 border-white px-4 py-3 rounded-full hover:text-[#0051a1] hover:bg-white transition-colors ease-in duration-300 cursor-pointer"
-            >
-              Join Waitlist
-            </button>
-          </form>
-        </div>
-        <div className="ml-auto float-left">
-          <span className="text-sm">
-            © 2023 SibiuTech. All rights reserved.
-          </span>
-        </div>
-      </footer>
+            {
+              error && (
+                <p className="text-red-500 text-sm">
+                  Please Enter A Valid Email
+                </p>
+              )
+            }
+          </div>
+          <button
+            type="submit"
+            className="border-2 border-white px-4 py-3 rounded-full hover:text-[#0051a1] hover:bg-white transition-colors ease-in duration-300 cursor-pointer"
+          >
+            Join Waitlist
+          </button>
+        </form>
+      </div>
     </section>
   );
 };
